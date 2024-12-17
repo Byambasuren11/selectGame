@@ -46,13 +46,13 @@ const firstClick=null;
 const secondClick=null;
 const result=false;
 function click(event) {
-    console.log(event);
-    console.log(event.target);
-    let e=event.target;
-  // card.style.visibility="visible";
-    // card
-    // card[index].style.visibility = "visible";
-    e.querySelector("p").classList.remove("hidden");
+    // console.log(event);
+    // console.log(event.target);
+    if(result) return ;
+    let clickedElement=event.target;
+    if(clickedElement===firstClick) return;
+    clickedElement.classList.add("f");
+    clickedElement.querySelector("p").classList.remove("hidden");
     // console.log(firstClick);
     // secondClick=e.querySelector("p").classList.remove("hidden");
     // console.log(secondClick);
